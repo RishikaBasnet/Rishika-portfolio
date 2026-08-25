@@ -1,0 +1,621 @@
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeUp 2s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+background: linear-gradient(180deg, #0f1920 0.000%, #1b232b 20.000%, #2a2c34 40.000%, #342c32 60.000%, #403336 80.000%, #443737 100.000%);
+}
+
+.logo-container {
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.slogan {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    font-family: 'Louis George Cafe', sans-serif;
+    margin-top: 0;
+    text-shadow:
+        0 0 25px rgba(255,255,255,.25),
+        0 0 60px rgba(173,216,255,.2);
+}
+
+.blurb {
+    color: rgb(196, 216, 234);
+    font-family: 'Louis George Cafe', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.about-section,
+.education-section,
+.whats-next-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.education-row {
+    display: flex;
+    gap: 24px;
+}
+
+.education-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 18px;
+    border: 1px solid rgba(173, 216, 255, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(173, 216, 255, 0.25);
+}
+
+.education-card-title {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: rgb(196, 216, 234);
+}
+
+.education-degrees {
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+.education-degrees li {
+    margin-bottom: 4px;
+}
+
+.education-meta {
+    margin: 0 0 4px;
+    font-size: 15px;
+}
+
+.education-coursework {
+    margin-top: 10px;
+}
+
+.education-coursework summary {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(196, 216, 234);
+}
+
+.education-coursework summary:hover {
+    opacity: 0.8;
+}
+
+.education-coursework p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.div4 {
+    text-align: left;
+}
+
+.blurb .div4 li {
+    margin-bottom: 10px;
+}
+
+.about-section .div1,
+.whats-next-section .div5 {
+    line-height: 1.6;
+}
+
+.highlight-blue {
+    color: #569CD6;
+}
+        
+.title {
+    font-size: 30px;
+    text-shadow:
+        0 0 25px rgba(255,255,255,.25),
+        0 0 30px rgba(173,216,255.2);
+}
+
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url('./fonts/louis_george_cafe/Louis\ George\ Cafe\ copy.woff2.ttf') format('woff2'),
+       url('./fonts/louis_george_cafe/Louis\ George\ Cafe.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particles span {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: rgba(173,216,255,.6);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(173,216,255,.8);
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0.25;
+  }
+
+  10% {
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(20px);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translateY(-10vh) translateX(-20px);
+    opacity: 0.5;
+  }
+}
+
+.particles span:nth-child(odd) {
+  width: 4px;
+  height: 4px;
+  opacity: 0.2;
+}
+
+.particles span:nth-child(even) {
+  width: 7px;
+  height: 7px;
+  opacity: 0.1;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2;
+}
+
+#main-content {
+  position: relative;
+  color: #ffffff;
+  min-height:100vh;
+  padding:20px;
+}
+
+.borders {
+    width: 50%;
+    height: auto;
+}
+
+
+
+.parent2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    align-items: start;
+}
+
+.parent2 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+    
+.div1 {
+    grid-column: span 2 / span 2;
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.parent2 .div4 {
+    overflow: hidden;
+}
+
+.div1 img,
+.div2 img,
+.div3 img,
+.div4 img {
+    width: 100%;
+}
+  
+.div3 a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38%;
+  z-index: 1;
+}
+
+.div3 a img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-links {
+  position: absolute;
+  top: 30%;
+  bottom: 28%;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.project-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: rgb(196, 216, 234);
+  font-family: Georgia;
+  font-size: clamp(13px, 1.6vw, 18px);
+}
+
+.skills-columns {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 150px;
+  gap: 10px;
+}
+
+.skills-column-title {
+  font-weight: bold;
+  color: rgb(196, 216, 234);
+  font-family: Georgia;
+  font-size: clamp(13px, 1.6vw, 18px);
+  margin-bottom: 6px;
+}
+
+.skills-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(196, 216, 234);
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: clamp(13px, 1.6vw, 18px);
+}
+
+.div2 .skills-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.project-link:hover {
+  opacity: 0.75;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background: #1b232b;
+  color: rgb(196, 216, 234);
+  padding: 28px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  font-family: Georgia;
+}
+
+.modal-content h2 {
+  color: rgb(196, 216, 234);
+  text-shadow:
+        0 0 25px rgba(255,255,255,.25),
+        0 0 30px rgba(173,216,255.2);
+}
+
+.modal-blurb {
+  text-align: left;
+  margin: 12px 0 20px;
+}
+
+.modal-subheading {
+  text-align: left;
+  color: rgb(196, 216, 234);
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 12px;
+}
+
+.skill-boxes,
+.modal-link-boxes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-link-boxes-single {
+  justify-content: center;
+}
+
+.modal-link-boxes-single .modal-link-box {
+  flex: none;
+  width: 50%;
+}
+
+.skill-box {
+  flex: 1;
+  text-align: center;
+  padding: 10px 8px;
+  border: 1px solid rgba(173, 216, 255, 0.4);
+  border-radius: 6px;
+  color: rgb(196, 216, 234);
+  font-family: Georgia;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(173, 216, 255, 0.35);
+}
+
+.modal-link-box {
+  flex: 1;
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 10px 8px;
+  border: 1px solid rgba(173, 216, 255, 0.4);
+  border-radius: 6px;
+  color: rgb(196, 216, 234);
+  font-family: Georgia;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(173, 216, 255, 0.35);
+}
+
+.modal-link-box:hover {
+  opacity: 0.8;
+}
+
+.modal-link-logo {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.modal-link-logo-wide {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 22px;
+  color: rgb(196, 216, 234);
+}
+
+.modal-close:hover {
+  opacity: 0.75;
+}
+
+.LaunchResume {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  margin: 0;
+  text-align: center;
+  font-size: 10px;
+  color: rgb(196, 216, 234);
+  font-family: 'Louis George Cafe', sans-serif;
+}
+
+.LaunchResumeCopy {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  margin: 0;
+  text-align: center;
+  font-size: 10px;
+  color: rgb(196, 216, 234);
+  font-family: 'Louis George Cafe', sans-serif;
+}
+
+.overlay-text1,
+.overlay-text2,
+.overlay-text3 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(196, 216, 234);
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow:
+        0 0 25px rgba(255,255,255,.25),
+        0 0 30px rgba(173,216,255.2);
+}
+
+.overlay-text4 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(196, 216, 234);
+  font-size: 30px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-shadow:
+        0 0 25px rgba(255,255,255,.25),
+        0 0 30px rgba(173,216,255.2);
+}
+
+.parent2 .div4 .socials {
+  position: absolute;
+  top: 30%;
+  bottom: 28%;
+  left: 15%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  overflow: hidden;
+  text-align: left;
+}
+
+.socials-item {
+  width: 100%;
+}
+
+.socials-item a {
+  display: grid;
+  grid-template-columns: clamp(18px, 2.5vw, 36px) 1fr;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: rgb(196, 216, 234);
+  font-family: Georgia;
+  font-size: clamp(13px, 1.6vw, 18px);
+}
+
+.socials-item a:hover {
+  opacity: 0.75;
+}
+
+.socials-item a span {
+  text-align: center;
+  color: rgb(196, 216, 234);
+}
+
+.gmail,
+.linkedlin,
+.github {
+  height: clamp(18px, 2.5vw, 36px);
+  width: clamp(18px, 2.5vw, 36px);
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .parent2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4 {
+    grid-column: 1 / -1;
+    grid-row-start: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .project-link,
+  .skills-column-title,
+  .skills-item,
+  .socials-item a {
+    font-size: 18px;
+  }
+}
